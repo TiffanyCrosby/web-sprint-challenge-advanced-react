@@ -29,14 +29,26 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+   You have to use a constructor with super to be able to pass down all the properties from React.Component. You also have to use the 'this' keyword... setState is one of the properties passed down from REact.Component so that is how you change state.
 
-2. Describe the different phases of the component lifecycle.
+2) Describe the different phases of the component lifecycle.
+   Birth- ComponentDidMount,
+   Life/Re-Render- ComponentDidUpdate --can either be forced(not recommended), or when props change/are added, or when state changes --only updates the components that have changed.
+   Death- ComponentWillUnmount
 
 3. Demonstrate an understanding of class component lifecycle methods.
+   constructor - gives us the properties of the parent class via super. Also keeps track of state.
+   render - this is what tells the screen what to show the user.
+   componentDidMount - this is the first time a component mounts/is rendered to the screen
+   componentDidUpdate- this is when a component is updated, by various methods, and is then rendered to the screen with updated info.
+   componentWillUnmount- this is when a component will be taken off the screen, such as when we sign into an account...the sign in form will then unmount so it is not shown on the 'logged in' screen.
 
-4. Define stateful logic.
+4) Define stateful logic.
+   It's basically the behind the scenes stuff that allows the state to change and work properly, handlechanges, event functions, etc.
 
 5. Describe how to test a React component with React Testing Library.
+   “Arrange, Act, Assert” structure for testing.
+   First, you give it a name that makes sense/tells other developers what you are testing for. Second, make a function that calls the thing you are trying to test by a method selector and makes sure it is rendered to the screen. Then tell it what you are expecting it to return by using the querySelector of your choice. Last, tell it where it is to be rendered or how it is to be rendered. Then run the test.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
